@@ -7,7 +7,12 @@ import styles from '../styles/Home.module.css';
 export default function Home({ countries }) {
   const [keyword, setKeyword] = useState('');
 
-  const filterCountries = countries.filter(country => country.name.toLowerCase().includes(keyword));
+  const filteredCountries = countries.filter(
+    (country) =>
+      country.name.toLowerCase().includes(keyword) ||
+      country.region.toLowerCase().includes(keyword) ||
+      country.subregion.toLowerCase().includes(keyword)
+  );
 
   const onInputChange = (e) => {
     e.preventDefault();
@@ -20,7 +25,7 @@ export default function Home({ countries }) {
         Found {countries.length} countries
       </div>
       <SearchInput placeholder='Filter by Name, Region or Subregion' onChange={onInputChange} />
-      <CountriesTable countries={filterCountries} />
+      <CountriesTable countries={filteredCountries} />
     </Layout>
   )
 };

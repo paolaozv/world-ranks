@@ -10,13 +10,13 @@ const CountriesTable = ({ countries }) => {
         <button className={styles.heading_population}>
           <div>Population</div>
         </button>
-        {countries.map((country) => (
-          <div className={styles.row} key={country.name}>
-            <div className={styles.name}>{country.name}</div>
-            <div className={styles.population}>{country.population}</div>
-          </div>
-        ))}
       </div>
+      {countries.map((country) => (
+        <div className={styles.row} key={country.name}>
+          <div className={styles.name}>{country.name}</div>
+          <div className={styles.population}>{country.population}</div>
+        </div>
+      ))}
     </div>
   );
 };

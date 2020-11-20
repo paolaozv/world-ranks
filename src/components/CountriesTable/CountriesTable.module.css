@@ -12,8 +12,7 @@
 
 .heading_name,
 .heading_population {
-  flex: 1;
-  padding: 20px;
+  flex: 4;
   color: var(--text-color-secondary);
   font-weight: 500;
   display: flex;
@@ -33,10 +32,10 @@
 }
 
 .name {
-  flex: 1;
+  flex: 4;
   text-align: left;
 }
 
 .population {
-  flex: 1;
+  flex: 4;
 }

@@ -27,7 +27,7 @@ export default function Home({ countries }) {
         </div>
         <div className={styles.input}>
           <SearchInput
-            placeholder="Filter by Name, Region or SubRegion"
+            placeholder='Filter by Name, Region or SubRegion'
             onChange={onInputChange}
           />
         </div>
@@ -38,7 +38,7 @@ export default function Home({ countries }) {
 };
 
 export const getStaticProps = async () => {
-  const response = await fetch("https://restcountries.eu/rest/v2/all");
+  const response = await fetch('https://restcountries.eu/rest/v2/all');
   const countries = await response.json();
 
   return {

@@ -102,8 +102,10 @@ const CountriesTable = ({ countries }) => {
               <img src={country.flag} alt={country.name} />
             </div>
             <div className={styles.name}>{country.name}</div>
-            <div className={styles.population}>{country.population}</div>
-            <div className={styles.area}>{country.area || 0}</div>
+            <div className={styles.population}>{(country.population).toLocaleString('en-US')}</div>
+            <div className={styles.area}>
+              {country.area ? (country.area).toLocaleString('en-US') : 0}
+            </div>
             <div className={styles.gini}>{country.gini || 0} %</div>
           </div>
         </Link>

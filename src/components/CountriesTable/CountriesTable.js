@@ -52,6 +52,14 @@ const CountriesTable = ({ countries }) => {
     setValue(value);
   };
 
+  if (countries.length === 0) {
+    return (
+      <div className={styles.no_results}>
+        There are no results related to your search
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className={styles.heading}>

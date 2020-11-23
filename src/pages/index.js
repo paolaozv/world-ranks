@@ -23,7 +23,7 @@ export default function Home({ countries }) {
     <Layout>
       <div className={styles.inputContainer}>
         <div className={styles.counts}>
-          Found {countries.length} countries
+          Found {filteredCountries.length} countries
         </div>
         <div className={styles.input}>
           <SearchInput

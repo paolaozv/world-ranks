@@ -1,3 +1,9 @@
+.no_results {
+  font-weight: 200;
+  text-align: center;
+  color: var(--text-color-secondary);
+}
+
 .heading {
   display: flex;
   padding: 20px;
